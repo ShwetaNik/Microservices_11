@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t premrachatwar/currencyservice:latest ."
+                        sh "docker build -t shwetanik/currencyservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push premrachatwar/currencyservice:latest "
+                        sh "docker push shwetanik/currencyservice:latest "
                     }
                 }
             }
